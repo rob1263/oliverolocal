@@ -32,14 +32,12 @@
   }
 }
 
-/* Color changes. */
+/* Color changes */
 [dir] .header__left {
   background-color: #d50058;
-  background-color: green;
 }
 [dir] .nav-primary__button {
   background-color: #d50058;
-  background-color: green;
 }
 
 /* Block quote */
@@ -47,7 +45,6 @@
   font-weight: bold;
 	font-size: 158px;
 	color: #d50058;
-  color: green;
 }
 [dir] .text-content blockquote {
   padding-left: 80px;
