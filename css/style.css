@@ -16,6 +16,36 @@
 [dir] .nav-primary__button {
   background-color: #e66000;
 }
+[dir] .mobile-nav-button__icon:before {
+  background-color: #e66000;
+}  
+[dir] .mobile-nav-button__icon {
+  background-color: #e66000;
+}  
+[dir] .mobile-nav-button__icon:after {
+  background-color: #e66000;
+}
+.breadcrumb__link {
+  color: #e66000;
+}
+[dir] .primary-nav__menu-link-inner:after {
+  border-top: solid 5px #e66000;
+}
+/*@media (min-width: 1200px)*/
+[dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2 {
+  border-top: solid 9px #e66000;
+}
+/*@media (min-width: 1200px)*/
+[dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2:after {
+  border-bottom: solid 10px #e66000;
+}
+/*@media (min-width: 700px)*/
+[dir] .tabs__link.is-active:after {
+  border-top: solid 6px #e66000;
+}
+[dir] .primary-nav__button-toggle .icon--menu-toggle:before, [dir] .primary-nav__button-toggle .icon--menu-toggle:after {
+  border-top: solid 3px #e66000;
+}
 
 /* Block quote */
 .text-content blockquote:before {
@@ -30,4 +60,9 @@
 /* Fullcalendar view experiment. */
 .js-drupal-fullcalendar table {
   display: table;
+}
+
+/* Add some space to fullawesome icons */
+.svg-inline--fa {
+  margin-right: 6px;
 }
