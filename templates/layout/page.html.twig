@@ -29,13 +29,11 @@
  *
  * Regions:
  * - page.header: Items for the header region.
- * - page.top: Items for the top region.
  * - page.highlighted: Items for the highlighted region.
  * - page.primary_menu: Items for the primary menu region.
  * - page.secondary_menu: Items for the secondary menu region.
  * - page.content: The main content of the current page.
- * - page.sidebar_first: Items for the first sidebar.
- * - page.sidebar_second: Items for the second sidebar.
+ * - page.sidebar: Items for the first sidebar.
  * - page.featured_bottom_first: Items for the first featured bottom region.
  * - page.featured_bottom_second: Items for the second featured bottom region.
  * - page.footer_first: Items for the first footer column.
@@ -99,17 +97,27 @@
     <div id="top-wrapper" class="layout-top-wrapper">
       <div id="top" class="layout-top">
         {{ page.top }}
-		  </div>
-		</div>
-	
+      </div>
+    </div>
+
     <div id="main-wrapper" class="layout-main-wrapper layout-container">
       <div id="main" class="layout-main">
 
         <main id="content" class="main-content container" role="main">
           <a id="main-content" tabindex="-1"></a>
+
           {{ page.highlighted }}
           {{ page.breadcrumb }}
-          {{ page.content }}
+          {{ page.content_above }}
+
+          {% if page.sidebar %}
+            <div class="sidebar-grid grid-full">
+              {{ page.content }}
+              {{ page.sidebar }}
+            </div>
+          {% else %}
+            {{ page.content }}
+          {% endif %}
         </main>
 
         {# TODO: Add RSS Social Block region #}
@@ -117,36 +125,19 @@
           <div class="social-container__inner fixable">
           </div>
         </aside>
-
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
-          </div>
-        {% endif %}
-        {% if page.sidebar_second %}
-          <div id="sidebar-second" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_second }}
-            </aside>
-          </div>
-        {% endif %}
       </div>
     </div>
-    {% if page.featured_bottom_first or page.featured_bottom_second %}
+    {% if page.featured_bottom %}
       <div class="featured-bottom">
-        <aside class="layout-container" role="complementary">
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
+        <aside class="featured-bottom__inner" role="complementary">
+          {{ page.featured_bottom }}
         </aside>
       </div>
     {% endif %}
     <footer class="site-footer">
-      <div class="site-footer__inner">
-        {% if page.footer %}
-          {{ page.footer }}
-        {% endif %}
+      <div class="site-footer__inner container">
+        {{ page.footer_top }}
+        {{ page.footer_bottom }}
       </div>
     </footer>
 

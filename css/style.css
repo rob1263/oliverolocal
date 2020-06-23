@@ -2,57 +2,58 @@
   .region--top.layout--content-medium, .layout--pass--content-medium > * {
     grid-column: 2 / 18;
   }
-  #block-oliverito-views-block-slideshow-block-1 img {
-    width: 100%;
-  }
 }
 
 /* Color changes */
 [dir] .header__left {
-  background-color: #e66000;
+  background-color: #d50058;
 }
 [dir] .nav-primary__button {
-  background-color: #e66000;
+  background-color: #d50058;
 }
 [dir] .mobile-nav-button__icon:before {
-  background-color: #e66000;
+  background-color: #d50058;
 }  
 [dir] .mobile-nav-button__icon {
-  background-color: #e66000;
+  background-color: #d50058;
 }  
 [dir] .mobile-nav-button__icon:after {
-  background-color: #e66000;
+  background-color: #d50058;
 }
 .breadcrumb__link {
-  color: #e66000;
+  color: #d50058;
 }
 [dir] .primary-nav__menu-link-inner:after {
-  border-top: solid 5px #e66000;
+  border-top: solid 5px #d50058;
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2 {
-    border-top: solid 9px #e66000;
+    border-top: solid 9px #d50058;
   }
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2:after {
-    border-bottom: solid 10px #e66000;
+    border-bottom: solid 10px #d50058;
   }
 }
 @media (min-width: 700px) {
   [dir] .tabs__link.is-active:after {
-    border-top: solid 6px #e66000;
+    border-top: solid 6px #d50058;
   }
   [dir] .primary-nav__button-toggle .icon--menu-toggle:before, [dir] .primary-nav__button-toggle .icon--menu-toggle:after {
-    border-top: solid 3px #e66000;
-							       }
+    border-top: solid 3px #d50058;
+  }
+}
+
+[dir="ltr"] .primary-nav__menu--level-2 {
+  border-left: solid 18px #d50058;
 }
 
 /* Block quote */
 .text-content blockquote:before {
   font-weight: bold;
   font-size: 158px;
-  color: #e66000;
+  color: #d50058;
 }
 [dir] .text-content blockquote {
   padding-left: 80px;
@@ -66,4 +67,10 @@
 /* Add some space to fullawesome icons */
 .svg-inline--fa {
   margin-right: 6px;
+}
+
+/* Decrease padding-top for main content - 90px is a bit much */
+/*@media (min-width: 700px)*/
+[dir] .main-content {
+    padding-top: 0px;
 }
