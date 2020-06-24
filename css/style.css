@@ -5,6 +5,15 @@
 }
 
 /* Color changes */
+[dir] .text-content a {
+  box-shadow: inset 0 -2px 0 0 #00acc8;
+}
+.text-content a {
+  color: #00acc8;
+}
+.node__title a:hover {
+  color: #00acc8;
+}
 [dir] .header__left {
   background-color: #d50058;
 }
