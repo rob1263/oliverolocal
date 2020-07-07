@@ -29,6 +29,18 @@
 [dir] .mobile-nav-button__icon:after {
   background-color: #d50058;
 }
+[dir] .button--primary {
+  background-color: #00acc8;
+  border-color: #00acc8;
+}
+[dir] .button--secondary:active,
+[dir] .button--secondary:hover,
+[dir] .button--secondary {
+  background-color: #d50058;
+  border-color: #d50058;
+  color: #fff;
+  font-family:"metropolis",sans-serif;
+}
 .breadcrumb__link {
   color: #d50058;
 }
@@ -68,10 +80,11 @@
   padding-left: 80px;
 }
 
-/* Fullcalendar view experiment. */
+/* Fullcalendar view experiment.
 .js-drupal-fullcalendar table {
   display: table;
 }
+*/
 
 /* Add some space to fullawesome icons */
 .svg-inline--fa {
@@ -82,4 +95,16 @@
 /*@media (min-width: 700px)*/
 [dir] .main-content {
     padding-top: 0px;
+}
+
+/* Make inline links inline. */
+ul.links.inline {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 1em 0 0;
+}
+
+/* Vertically align funder logos. */
+#block-views-block-funders-and-partners-block-1 .views-view-grid--horizontal {
+  align-items: center;
 }
