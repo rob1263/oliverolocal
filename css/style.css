@@ -1,5 +1,5 @@
 @media (min-width: 700px) {
-  .region--top.layout--content-medium, .layout--pass--content-medium > * {
+  .layout--pass--content-medium > * {
     grid-column: 2 / 18;
   }
 }
@@ -146,4 +146,63 @@ ul.links.inline {
 }
 [dir=ltr] table th.text-align-right {
   text-align: right;
+}
+
+/* Style co-Sponsor logos */
+.block-views-blocksponsor-logos-block-1 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.block-views-blocksponsor-logos-block-1 ul {
+  text-align: center;
+  padding-left: 0px;
+}
+.block-views-blocksponsor-logos-block-1 li {
+  display: inline-block;
+}
+.block-views-blocksponsor-logos-block-1 img {
+  float: left;
+  padding-left: 0px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Colour the slick navigation buttons */
+.slick-arrow::before {
+    color: #82c45a;
+}
+
+/* Remove huge padding-top and bottom */
+/* @media (min-width: 1200px) */
+[dir] .featured-bottom__inner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Remove some more XL padding */
+/* @media (min-width: 1200px) */
+[dir] .node__content {
+    padding-bottom: 1px;
+}
+
+/* Smaller indent for 700px, 1000px, ... */
+@media (min-width: 700px) {
+  .sidebar-grid .layout--pass--content-medium > #block-oliverolocal-content {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2 / 12;
+  }
+}
+
+table#wf-crm-billing-items {
+    width: 100%;
+}
+
+.crm-container input[type=text] {
+  min-height: inherit;
+}
+
+#wf-crm-billing-items caption {
+    display: none;
 }
