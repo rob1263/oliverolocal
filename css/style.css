@@ -132,42 +132,6 @@ ul.links.inline {
   margin: 0 1em 0 0;
 }
 
-/* Vertically align funder logos. */
-#block-views-block-funders-and-partners-block-1 .views-view-grid--horizontal {
-  align-items: center;
-}
-
-/* Fix for alignment of table th content in ckeditor. */
-[dir=ltr] table th.text-align-left {
-  text-align: left;
-}
-[dir=ltr] table th.text-align-center {
-  text-align: center;
-}
-[dir=ltr] table th.text-align-right {
-  text-align: right;
-}
-
-/* Style co-Sponsor logos */
-.block-views-blocksponsor-logos-block-1 {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-.block-views-blocksponsor-logos-block-1 ul {
-  text-align: center;
-  padding-left: 0px;
-}
-.block-views-blocksponsor-logos-block-1 li {
-  display: inline-block;
-}
-.block-views-blocksponsor-logos-block-1 img {
-  float: left;
-  padding-left: 0px;
-  margin-bottom: 30px;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 /* Colour the slick navigation buttons */
 .slick-arrow::before {
     color: #82c45a;
@@ -211,15 +175,3 @@ table#wf-crm-billing-items {
 .crm-container input[type=text] {
     min-height: inherit;
 }
-
-/* Center partners block title and logos. */
-#block-views-block-funders-and-partners-block-1 {
-  text-align: center;
-}
-#block-views-block-funders-and-partners-block-1 h2 {
-  display: inline-block;
-}
-#block-views-block-funders-and-partners-block-1 img {
-  display: inline-block;
-}
-
