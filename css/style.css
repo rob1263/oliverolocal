@@ -198,3 +198,24 @@ table#wf-crm-billing-items {
 #block-views-block-funders-and-partners-block-1 img {
   display: inline-block;
 }
+
+/* Style co-Sponsor logos */
+.block-views-blocksponsor-logos-block-1 {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.block-views-blocksponsor-logos-block-1 ul {
+  text-align: center;
+  padding-left: 0px;
+}
+.block-views-blocksponsor-logos-block-1 li {
+  display: inline-block;
+}
+.block-views-blocksponsor-logos-block-1 img {
+  float: left;
+  padding-left: 0px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
