@@ -175,3 +175,15 @@ table#wf-crm-billing-items {
 .crm-container input[type=text] {
     min-height: inherit;
 }
+
+/* Shoreditch versus olivero country select. */
+.crm-container select.crm-form-select:hover {
+  background-image: url(../../../files/civicrm/ext/org.civicrm.shoreditch/img/drop-down-arrow.svg);
+}
+.crm-container select.crm-form-select {
+  background-image: url(../../../files/civicrm/ext/org.civicrm.shoreditch/img/drop-down-arrow.svg);
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+  padding-left: 1em;
+}
