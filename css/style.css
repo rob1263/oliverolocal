@@ -173,6 +173,11 @@ table#wf-crm-billing-items {
     width: 100%;
 }
 
+.webform-likert-table-wrapper th {
+    text-align: left;
+    padding-left: 0.5em;
+}
+
 .crm-container input[type=text] {
   min-height: inherit;
 }
