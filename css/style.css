@@ -1,15 +1,35 @@
-@media (min-width: 700px) {
+/* OLD D8 */
+/*@media (min-width: 700px) {
   .layout--pass--content-medium > * {
     grid-column: 2 / 18;
   }
+}*/
+
+@media (min-width: 62.5rem) {
+  .sidebar-grid > .grid-full {
+    grid-template-columns: none;
+    grid-column: 1 / 11;
+    grid-column-gap: 3rem;
+  }
+  .layout--content-medium, .layout--pass--content-medium > * {
+    grid-column: 2 / 14;
+  }
 }
+
+/*
+@media (min-width: 700px) {
+  .sidebar-grid .layout--pass--content-medium > * {
+    grid-column: 2 / 11;
+  }
+}
+*/
 
 /* Color changes */
 [dir] .text-content a {
-  box-shadow: inset 0 -2px 0 0 #3a4149;
+  box-shadow: inset 0 -2px 0 0 #6bbaa7;
 }
 .text-content a {
-  color: #3a4149;
+  color: #6bbaa7;
 }
 [dir] .text-content a.button,
 [dir] .text-content a.button:hover,
@@ -18,97 +38,97 @@
   text-decoration: none;
 }
 .node__title a:hover {
-  color: #3a4149;
+  color: #6bbaa7;
 }
 [dir] .header__left {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }
 [dir] .nav-primary__button {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }
 [dir] .mobile-nav-button__icon:before {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }  
 [dir] .mobile-nav-button__icon {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }  
 [dir] .mobile-nav-button__icon:after {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }
 [dir] .button--primary {
-  background-color: #3a4149;
-  border-color: #3a4149;
+  background-color: #6bbaa7;
+  border-color: #6bbaa7;
 }
 [dir] .button--secondary:active,
 [dir] .button--secondary:hover,
 [dir] .button--secondary {
-  background-color: #7ca642;
-  border-color: #7ca642;
+  background-color: #e41f67;
+  border-color: #e41f67;
 }
 .node__title a:hover {
-  color: #3a4149;
+  color: #6bbaa7;;
 }
 [dir] .header__left {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }
 [dir] .nav-primary__button {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }
 [dir] .mobile-nav-button__icon:before {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }  
 [dir] .mobile-nav-button__icon {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }  
 [dir] .mobile-nav-button__icon:after {
-  background-color: #7ca642;
+  background-color: #337ab7;
 }
 [dir] .button--primary {
-  background-color: #3a4149;
-  border-color: #3a4149;
+  background-color: #6bbaa7;;
+  border-color: #6bbaa7;;
 }
 [dir] .button--secondary:active,
 [dir] .button--secondary:hover,
 [dir] .button--secondary {
-  background-color: #7ca642;
-  border-color: #7ca642;
+  background-color: #e41f67;
+  border-color: #e41f67;
   color: #fff;
   font-family:"metropolis",sans-serif;
 }
 .breadcrumb__link {
-  color: #7ca642;
+  color: #337ab7;
 }
 [dir] .primary-nav__menu-link-inner:after {
-  border-top: solid 5px #7ca642;
+  border-top: solid 5px #337ab7;
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2 {
-    border-top: solid 9px #7ca642;
+    border-top: solid 9px #337ab7;
   }
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2:after {
-    border-bottom: solid 10px #7ca642;
+    border-bottom: solid 10px #337ab7;
   }
 }
 @media (min-width: 700px) {
   [dir] .tabs__link.is-active:after {
-    border-top: solid 6px #7ca642;
+    border-top: solid 6px #337ab7;
   }
   [dir] .primary-nav__button-toggle .icon--menu-toggle:before, [dir] .primary-nav__button-toggle .icon--menu-toggle:after {
-    border-top: solid 3px #7ca642;
+    border-top: solid 3px #337ab7;
   }
 }
 
 [dir="ltr"] .primary-nav__menu--level-2 {
-  border-left: solid 18px #7ca642;
+  border-left: solid 18px #337ab7;
 }
 
 /* Block quote */
 .text-content blockquote:before {
   font-weight: bold;
   font-size: 158px;
-  color: #7ca642;
+  color: #337ab7;
 }
 [dir] .text-content blockquote {
   padding-left: 80px;
@@ -134,7 +154,7 @@ ul.links.inline {
 
 /* Colour the slick navigation buttons */
 .slick-arrow::before {
-    color: #7ca642;
+    color: #337ab7;
 }
 
 /* Remove huge padding-top and bottom */
@@ -151,6 +171,7 @@ ul.links.inline {
 }
 
 /* Smaller indent for 700px, 1000px, ... */
+/*
 @media (min-width: 700px) {
   .sidebar-grid .layout--pass--content-medium > #block-oliverolocal-content {
     -ms-grid-column: 2;
@@ -158,6 +179,7 @@ ul.links.inline {
     grid-column: 2 / 12;
   }
 }
+*/
 
 /* Button spacing in views */
 [dir=ltr] .views-element-container .button {
@@ -234,3 +256,16 @@ table#wf-crm-billing-items {
   margin-right: 15px;
 }
 
+/* Footer social media links. */
+#block-d8connect a {
+  font-size: 280%;
+  margin-right: .5em;
+  box-shadow: none;
+}
+
+.ui-accordion .ui-accordion-header {
+    background-color: #341f67;
+}
+.ui-state-default a, .ui-state-default a:link {
+    color: #ffffff;
+}
