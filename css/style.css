@@ -270,6 +270,10 @@ table#wf-crm-billing-items {
     background-repeat: no-repeat;
     background-position: left center;
 }
+/* Social Media Links Block */
+#block-socialmedialinks a {
+    color: #d50058;
+}
 
 /* CSS for Calendar -> handled by Asset Injector module */
 
