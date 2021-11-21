@@ -1,3 +1,9 @@
+/* Colour Definitions
+primary-color: #82c45a (civicrm green - menu)
+secondary-color: #25aae1 (drupal blue - links)
+button-color: #d50058 (pink - secondary buttons)
+*/
+
 /* Layout Changes */
 
 @media (min-width: 700px) {
@@ -20,10 +26,10 @@
 
 /* Color changes */
 [dir] .text-content a {
-  box-shadow: inset 0 -2px 0 0 #82c45a;
+  box-shadow: inset 0 -2px 0 0 #25aae1;
 }
 .text-content a {
-  color: #82c45a;
+  color: #25aae1;
 }
 [dir] .text-content a.button,
 [dir] .text-content a.button:hover,
@@ -32,7 +38,7 @@
   text-decoration: none;
 }
 .node__title a:hover {
-  color: #82c45a;
+  color: #25aae1;
 }
 [dir] .site-header__initial,
 [dir] .sticky-header-toggle {
@@ -55,14 +61,14 @@
 }
 /* Colour and align buttons */
 [dir] .button--primary {
-  background-color: #82c45a;
-  border-color: #82c45a;
+  background-color: #25aae1;
+  border-color: #25aae1;
 }
 [dir] .button--secondary:active,
 [dir] .button--secondary:hover,
 [dir] .button--secondary {
-  background-color: #82c45a;
-  border-color: #82c45a;
+  background-color: #d50058;
+  border-color: #d50058;
   justify-content: center;
   min-width: 270px;
   color: #fff;
@@ -70,61 +76,61 @@
 }
 
 .node__title a:hover {
-  color: #82c45a;
+  color: #25aae1;
 }
 [dir] .header__left {
-  background-color: #82c45a;
+  background-color: #25aae1;
 }
 [dir] .nav-primary__button {
-  background-color: #82c45a;
+  background-color: #25aae1;
 }
 [dir] .mobile-nav-button__icon:before {
-  background-color: #82c45a;
+  background-color: #25aae1;
 }  
 [dir] .mobile-nav-button__icon {
-  background-color: #82c45a;
+  background-color: #25aae1;
 }  
 [dir] .mobile-nav-button__icon:after {
-  background-color: #82c45a;
+  background-color: #25aae1;
 }
 [dir] .button--primary {
-  background-color: #82c45a;
-  border-color: #82c45a;
+  background-color: #25aae1;
+  border-color: #25aae1;
 }
 .breadcrumb__link {
-  color: #82c45a;
+  color: #25aae1;
 }
 [dir] .primary-nav__menu-link-inner:after {
-  border-top: solid 5px #82c45a;
+  border-top: solid 5px #25aae1;
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2 {
-    border-top: solid 9px #82c45a;
+    border-top: solid 9px #25aae1;
   }
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2:after {
-    border-bottom: solid 10px #82c45a;
+    border-bottom: solid 10px #25aae1;
   }
 }
 @media (min-width: 700px) {
   [dir] .tabs__link.is-active:after {
-    border-top: solid 6px #82c45a;
+    border-top: solid 6px #25aae1;
   }
   [dir] .primary-nav__button-toggle .icon--menu-toggle:before, [dir] .primary-nav__button-toggle .icon--menu-toggle:after {
-    border-top: solid 3px #82c45a;
+    border-top: solid 3px #25aae1;
   }
 }
 
 [dir="ltr"] .primary-nav__menu--level-2 {
-  border-left: solid 18px #82c45a;
+  border-left: solid 18px #25aae1;
 }
 
 /* Block quote */
 .text-content blockquote:before {
   font-weight: bold;
   font-size: 158px;
-  color: #82c45a;
+  color: #25aae1;
 }
 [dir] .text-content blockquote {
   padding-left: 80px;
@@ -150,7 +156,7 @@ ul.links.inline {
 
 /* Colour the slick navigation buttons */
 .slick-arrow::before {
-    color: #82c45a;
+    color: #25aae1;
 }
 
 /* Remove huge padding-top and bottom */
@@ -166,29 +172,17 @@ ul.links.inline {
     padding-bottom: 1px;
 }
 
-/* Button spacing in views */
-[dir=ltr] .views-element-container .button {
-  margin: 0;
-}
-
-/* Table td spacing in views */
-[dir=ltr] .views-table td {
-  padding: 6px 18px 6px 0;
-}
-
+/* Webform css*/
 table#wf-crm-billing-items {
     width: 100%;
 }
-
 .webform-likert-table-wrapper th {
     text-align: left;
     padding-left: 0.5em;
 }
-
 .crm-container input[type=text] {
   min-height: inherit;
 }
-
 #wf-crm-billing-items caption {
     display: none;
 }
@@ -197,7 +191,6 @@ table#wf-crm-billing-items {
 .crm-container input[type=text] {
     min-height: inherit;
 }
-
 /* Shoreditch versus olivero country select. */
 .crm-container select.crm-form-select:hover {
   background-image: url(../../../files/civicrm/ext/org.civicrm.shoreditch/img/drop-down-arrow.svg);
@@ -208,6 +201,17 @@ table#wf-crm-billing-items {
   line-height: 30px;
   padding: 0;
   padding-left: 1em;
+}
+
+/* Views css*/
+/* Button spacing in views */
+[dir=ltr] .views-element-container .button {
+  margin: 0;
+}
+
+/* Table td spacing in views */
+[dir=ltr] .views-table td {
+  padding: 6px 18px 6px 0;
 }
 
 /* Center partners block title and logos. */
@@ -249,7 +253,7 @@ table#wf-crm-billing-items {
 }
 
 .ui-accordion .ui-accordion-header {
-    background-color: #82c45a;
+    background-color: #25aae1;
 }
 .ui-state-default a, .ui-state-default a:link {
     color: #ffffff;
