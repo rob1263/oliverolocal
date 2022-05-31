@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function oliverolocal_theme_suggestions_block_alter(&$suggestions, $variables) {
+
+  // Load theme suggestions for blocks from parent theme.
+  foreach ($suggestions as &$suggestion) {
+    $suggestion = str_replace('oliverolocal_', 'olivero_', $suggestion);
+  }
+}
+
+function oliverolocal_preprocess_html(&$variables) {
+   _oliverolocal_preprocess_html_add_css_color_vars($variables);
+}
+
+/**
+ * For node pages, where the node type has color_field fields,
+ * add the color field values to css variables for the page.
+*/
+function _oliverolocal_preprocess_html_add_css_color_vars(&$variables) {
+
+  // Is it a node page?
+  if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
+
+    // Find any color fields.
+    $fdefs = $node->getFieldDefinitions(); 
+    $color_fields = [];
+    foreach ($fdefs as $fd) {
+      if ($fd->getType() == 'color_field_type') {
+        $color_fields[] = $fd->getName();
+      }
+    }
+    if (!empty($color_fields)) {
+
+      // Get color values.
+      $color_field_values = [];
+      foreach ($color_fields as $field_name) {
+        $v = $node->{$field_name}->color;
+        if (!empty($v)) {
+          $color_field_values[$field_name] = $v;
+        }
+      }
+
+      // Add CSS vars.
+      if (!empty($color_field_values)) {
+        $css_vars = [];
+        foreach ($color_field_values as $fname => $color) {
+          // CSS var name, e.g.: --basic-page-color-light
+          $var_name =  $node->getType() . '-' . preg_replace('#^field_#', '', $fname);
+          $css_vars[] = '--' . str_replace('_', '-', $var_name) . ': ' . strtolower($color) . ';'; 
+        }
+        if (!empty($css_vars)) {
+          $style = [
+            '#tag' => 'style',
+            '#value' => ":root {\n  " . implode("\n  ", $css_vars) . "\n}",
+          ];
+          $variables['page']['#attached']['html_head'][] = [$style, 'oliverolocal-page-colors'];
+        }
+      }
+    }
+  }
+}

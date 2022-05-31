@@ -1,6 +1,6 @@
 name: OliveroLocal
 type: theme
-base theme: olivero
+base theme: 'olivero'
 description: 'An Olivero subtheme.'
 version: VERSION
 core: 8.x
