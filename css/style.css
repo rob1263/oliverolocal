@@ -136,6 +136,10 @@ button-color: #d50058 (pink - secondary buttons)
   border-left: solid 18px #002855;
 }
 
+.breadcrumb:after {
+  background: none;
+}
+
 /* Block quote */
 .text-content blockquote:before {
   font-weight: bold;
@@ -329,7 +333,7 @@ body:not(.is-always-mobile-nav) .primary-nav__menu--level-1 {
   }
 }
 
-h1 {
+h1, h2, h3 {
     font-family: "CenturyGothicBold","Metropolis",sans-serif;
 }
 
@@ -337,7 +341,7 @@ p {
     font-family: "CenturyGothic","Metropolis",sans-serif;
 }
 
-ul {
+ol, ul {
     font-family: "CenturyGothic","Metropolis",sans-serif;
 }
 
@@ -366,66 +370,112 @@ ul {
   min-height: 300px;
   padding: 2em;
   text-align: center;
-  color: var(--basic-page-colour-dark);
-  background-color: var(--basic-page-colour-light);
+  color: var(--colour-dark);
+  background-color: var(--colour-light);
   text-decoration: none;
   font-size: 120%;
   font-weight: bold;
 }
 .page-node-type-basic-page .region--content .menu li a:hover {
-  color: var(--basic-page-colour-light);
-  background-color: var(--basic-page-colour-dark);
+  color: var(--colour-light);
+  background-color: var(--colour-dark);
 }
 
 .views-exposed-form .form-actions {
   padding-top: 0.55rem;
 }
 
-.block-views-blockteam-banner-block-1 .team-banner-title {
+.block-views-blockpage-banner-block-1 .banner-title {
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 0.2em;
-    background-color: var(--team-team-color);
-    color: #fff;
+    color: var(--banner-text-color);
+    background-color: var(--banner-box-color);
     text-transform: uppercase;
 }
 @media (min-width: 700px) {
-.block-views-blockteam-banner-block-1 .block__content {
+.block-views-blockpage-banner-block-1 .block__content {
   position: relative;
 }
-.block-views-blockteam-banner-block-1 .team-banner-title-wrapper {
+.block-views-blockpage-banner-block-1 .banner-title-wrapper {
   position: absolute;
   top: calc(50% - 2em);
   left: 0;
   width: 100%;
   text-align: center;
 }
-.block-views-blockteam-banner-block-1 .team-banner-title-wrapper .team-banner-title {
+.block-views-blockpage-banner-block-1 .banner-title-wrapper .banner-title {
   display: inline-block;
-  color: #fff;
-  background-color: var(--team-team-color);
-  box-shadow: 2px 2px 2px var(--team-team-color);
+  color: var(--banner-text-color);
+  background-color: var(--banner-box-color);
+  box-shadow: 2px 2px 2px var(--banner-box-color);
   padding: .5em 2em;
   width: fit-content;
 }
 }
 
 .blazy--view--team-projects .grid__content {
-  max-width: 320px;
+  width: 100%;
 }
-.blazy--view--team-projects h4 {
+@media screen and (min-width: 40em) {
+.blazy--view--team-projects .grid__content {
+  max-width: 320px;
+  min-height: 440px;
+}
+}
+.blazy--view--team-projects h4,
+.blazy--view--webform-type h4 {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
 }
-.blazy--view--team-projects h4 a {
+.blazy--view--team-projects h4 a,
+.blazy--view--webform-type h4 a {
   display: block;
   width: 100%;
   text-align: center;
-  color: #fff;
-  background-color: var(--team-team-color);
+  color: var(--banner-text-color);
+  background-color: var(--banner-box-color);
   text-decoration: none;
   padding: .5em;
+}
+.blazy--view--team-projects .views-field-field-project-description {
+  margin-top: 1em;
+}
+
+.page-node-type-team article .field--name-field-paragraphs > .field__item .layout--twocol > .layout__region--first {
+  padding: 2em;
+  color: var(--banner-text-color);
+  background-color: var(--banner-box-color);
+}
+.page-node-type-team article .field--name-field-paragraphs > .field__item .layout--twocol > .layout__region--first h2 {
+  margin-top: 0;
+  color: var(--banner-text-color);
+}
+.page-node-type-team article .field--name-field-paragraphs > .field__item .layout--twocol > .layout__region--first .text-content p {
+  color: var(--banner-text-color);
+}
+
+#content .block__title {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  color: #313637;
+  margin-bottom: 1em;
+}
+@media (min-width: 43.75rem) {
+  #content .block__title {
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+  }
+}
+
+.page-node-type-team #block-oliverolocal-breadcrumbs {
+  margin-bottom: 0;
+  padding: 1em;
+  background-color: #000;
+}
+.page-node-type-team #block-oliverolocal-breadcrumbs a {
+  color: #fff;
 }

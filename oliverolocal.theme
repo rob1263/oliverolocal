@@ -47,8 +47,8 @@ function _oliverolocal_preprocess_html_add_css_color_vars(&$variables) {
       if (!empty($color_field_values)) {
         $css_vars = [];
         foreach ($color_field_values as $fname => $color) {
-          // CSS var name, e.g.: --basic-page-color-light
-          $var_name =  $node->getType() . '-' . preg_replace('#^field_#', '', $fname);
+          // CSS var name, e.g.: --color-light
+          $var_name =  preg_replace('#^field_#', '', $fname);
           $css_vars[] = '--' . str_replace('_', '-', $var_name) . ': ' . strtolower($color) . ';'; 
         }
         if (!empty($css_vars)) {
