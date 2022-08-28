@@ -1,5 +1,43 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter().
+ */
+function oliverolocal_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  // Our theme settings
+  $form['oliverolocal'] = [
+    '#type' => 'fieldset',
+    '#title' => t('OliveroLocal'),
+  ];
+  // Theme colors
+  $form['oliverolocal']['oliverolocal_theme_colors'] = [
+    '#type' => 'textfield',
+    '#title' => t('Theme colors'),
+    '#default_value' => theme_get_setting('oliverolocal_theme_colors'),
+    '#description' => t('A comma-delimited list of hex colors which will be available as CSS vars on every page (as --oliverolocal-color-1, --oliverolocal-color-2, etc.)'),
+  ];
+  $form['#validate'][] = 'oliverolocal_theme_colors_validate';
+}
+
+/**
+ * Validation callback for theme setting 'oliverolocal_theme_colors'.
+ */
+function oliverolocal_theme_colors_validate(&$element,  \Drupal\Core\Form\FormStateInterface $form_state) {
+  $value = $form_state->getValue('oliverolocal_theme_colors');
+  if (!empty($value)) {
+    $colors = preg_split('#\s*,\s*#', $value);
+    foreach ($colors as $color) {
+      if (!preg_match('/^#(?:[0-9a-f]{3}){1,2}$/i', $color)) {
+        $form_state->setErrorByName('oliverolocal_theme_colors', t('Unrecognized hex color value'));
+        break;
+      }
+    }
+  }
+}
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter for blocks.
  */
@@ -20,6 +58,34 @@ function oliverolocal_preprocess_html(&$variables) {
  * add the color field values to css variables for the page.
 */
 function _oliverolocal_preprocess_html_add_css_color_vars(&$variables) {
+
+  //
+  // Add CSS vars for theme colors.
+  //
+
+  $theme_colors = preg_split('#\s*,\s*#', theme_get_setting('oliverolocal_theme_colors', 'oliverolocal'));
+
+  if (!empty($theme_colors)) {
+    $theme_color_css_vars = [];
+    $i = 0;
+    foreach ($theme_colors as $theme_color) {
+      $i++;
+
+      // CSS var names, e.g.: --oliverolocal-color-1
+      $theme_color_css_vars[] = '--oliverolocal-color-' . $i . ': ' . strtolower($theme_color) . ';'; 
+    }
+    if (!empty($theme_color_css_vars)) {
+      $style = [
+        '#tag' => 'style',
+        '#value' => ":root {\n  " . implode("\n  ", $theme_color_css_vars) . "\n}",
+      ];
+      $variables['page']['#attached']['html_head'][] = [$style, 'oliverolocal-colors'];
+    }
+  }
+
+  //
+  // Add CSS vars for pages where content type has color fields.
+  //
 
   // Is it a node page?
   if (($node = \Drupal::routeMatch()->getParameter('node')) && $node instanceof \Drupal\node\NodeInterface) {
