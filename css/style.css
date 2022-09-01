@@ -26,10 +26,10 @@ button-color: #d50058 (pink - secondary buttons)
 
 /* Color changes */
 [dir] .text-content a {
-  box-shadow: inset 0 -2px 0 0 #002855;
+  box-shadow: inset 0 -2px 0 0 var(--oliverolocal-color-2, #002855);
 }
 .text-content a {
-  color: #002855;
+  color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .text-content a.button,
 [dir] .text-content a.button:hover,
@@ -38,37 +38,37 @@ button-color: #d50058 (pink - secondary buttons)
   text-decoration: none;
 }
 .node__title a:hover {
-  color: #002855;
+  color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .site-header__initial,
 [dir] .sticky-header-toggle {
-  background-color: #00703C;
+  background-color: var(--oliverolocal-color-1, #00703C);
 }
 [dir] .header__left {
-  background-color: #00703C;
+  background-color: var(--oliverolocal-color-1, #00703C);
 }
 [dir] .nav-primary__button {
-  background-color: #00703C;
+  background-color: var(--oliverolocal-color-1, #00703C);
 }
 [dir] .mobile-nav-button__icon:before {
-  background-color: #00703C;
+  background-color: var(--oliverolocal-color-1, #00703C);
 }  
 [dir] .mobile-nav-button__icon {
-  background-color: #00703C;
+  background-color: var(--oliverolocal-color-1, #00703C);
 }  
 [dir] .mobile-nav-button__icon:after {
-  background-color: #00703C;
+  background-color: var(--oliverolocal-color-1, #00703C);
 }
 /* Colour and align buttons */
 [dir] .button--primary {
-  background-color: #002855;
-  border-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
+  border-color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .button--secondary:active,
 [dir] .button--secondary:hover,
 [dir] .button--secondary {
-  background-color: #d50058;
-  border-color: #d50058;
+  background-color: var(--oliverolocal-color-3, #d50058);
+  border-color: var(--oliverolocal-color-3, #d50058);
   justify-content: center;
   min-width: 270px;
   color: #fff;
@@ -77,8 +77,8 @@ button-color: #d50058 (pink - secondary buttons)
 [dir] .button--secondaryinmenu:active,
 [dir] .button--secondaryinmenu:hover,
 [dir] .button--secondaryinmenu {
-  background-color: #002855;
-  border-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
+  border-color: var(--oliverolocal-color-2, #002855);
   justify-content: center;
   color: #fff;
   font-family:"metropolis",sans-serif;
@@ -86,54 +86,54 @@ button-color: #d50058 (pink - secondary buttons)
   margin-left: 20px;
 }
 .node__title a:hover {
-  color: #002855;
+  color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .header__left {
-  background-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .nav-primary__button {
-  background-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .mobile-nav-button__icon:before {
-  background-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
 }  
 [dir] .mobile-nav-button__icon {
-  background-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
 }  
 [dir] .mobile-nav-button__icon:after {
-  background-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .button--primary {
-  background-color: #002855;
-  border-color: #002855;
+  background-color: var(--oliverolocal-color-2, #002855);
+  border-color: var(--oliverolocal-color-2, #002855);
 }
 .breadcrumb__link {
-  color: #002855;
+  color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .primary-nav__menu-link-inner:after {
-  border-top: solid 5px #002855;
+  border-top: solid 5px var(--oliverolocal-color-2, #002855);
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2 {
-    border-top: solid 9px #002855;
+    border-top: solid 9px var(--oliverolocal-color-2, #002855);
   }
 }
 @media (min-width: 1200px) {
   [dir] body:not(.is-always-mobile-nav) .primary-nav__menu--level-2:after {
-    border-bottom: solid 10px #002855;
+    border-bottom: solid 10px var(--oliverolocal-color-2, #002855);
   }
 }
 @media (min-width: 700px) {
   [dir] .tabs__link.is-active:after {
-    border-top: solid 6px #002855;
+    border-top: solid 6px var(--oliverolocal-color-2, #002855);
   }
   [dir] .primary-nav__button-toggle .icon--menu-toggle:before, [dir] .primary-nav__button-toggle .icon--menu-toggle:after {
-    border-top: solid 3px #002855;
+    border-top: solid 3px var(--oliverolocal-color-2, #002855);
   }
 }
 
 [dir="ltr"] .primary-nav__menu--level-2 {
-  border-left: solid 18px #002855;
+  border-left: solid 18px var(--oliverolocal-color-2, #002855);
 }
 
 .breadcrumb:after {
@@ -144,7 +144,7 @@ button-color: #d50058 (pink - secondary buttons)
 .text-content blockquote:before {
   font-weight: bold;
   font-size: 158px;
-  color: #002855;
+  color: var(--oliverolocal-color-2, #002855);
 }
 [dir] .text-content blockquote {
   padding-left: 80px;
@@ -170,7 +170,7 @@ ul.links.inline {
 
 /* Colour the slick navigation buttons */
 .slick-arrow::before {
-    color: #002855;
+    color: var(--oliverolocal-color-2, #002855);
 }
 
 /* Remove huge padding-top and bottom */
@@ -267,7 +267,7 @@ table#wf-crm-billing-items {
 }
 
 .ui-accordion .ui-accordion-header {
-    background-color: #002855;
+    background-color: var(--oliverolocal-color-2, #002855);
 }
 .ui-state-default a, .ui-state-default a:link {
     color: #ffffff;
@@ -329,7 +329,7 @@ body:not(.is-always-mobile-nav) .primary-nav__menu--level-1 {
 /* Color for submenu triangle */
 @media (min-width: 75rem) {
   body:not(.is-always-mobile-nav) .primary-nav__menu-🥕 {
-    border-bottom: solid 10px #002855 !important;
+    border-bottom: solid 10px var(--oliverolocal-color-2, #002855) !important;
   }
 }
 
