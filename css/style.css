@@ -133,7 +133,7 @@ button-color: #d50058 (pink - secondary buttons)
 }
 
 [dir="ltr"] .primary-nav__menu--level-2 {
-  border-left: solid 18px var(--oliverolocal-color-2, #002855);
+  border-left: solid 18px var(--oliverolocal-color-2, #002855) !important;
 }
 
 .breadcrumb:after {
