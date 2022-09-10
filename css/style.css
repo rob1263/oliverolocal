@@ -1,7 +1,5 @@
 /* Colour Definitions
-primary-color: #00703C (ecologyaction green); #82c45a (civicrm green - menu)
-secondary-color: #002855 (ecologyaction blue); #25aae1 (drupal blue - links)
-button-color: #d50058 (pink - secondary buttons)
+From oliverolocal settings /admin/appearance/settings/oliverolocal
 */
 
 /* Layout Changes */
@@ -130,10 +128,6 @@ button-color: #d50058 (pink - secondary buttons)
   [dir] .primary-nav__button-toggle .icon--menu-toggle:before, [dir] .primary-nav__button-toggle .icon--menu-toggle:after {
     border-top: solid 3px var(--oliverolocal-color-2, #002855);
   }
-}
-
-[dir="ltr"] .primary-nav__menu--level-2 {
-  border-left: solid 18px var(--oliverolocal-color-2, #002855) !important;
 }
 
 .breadcrumb:after {
@@ -326,6 +320,12 @@ body:not(.is-always-mobile-nav) .primary-nav__menu--level-1 {
   flex-wrap: nowrap;
 }
 
+@media (max-width: 75rem) {
+  [dir=ltr] .primary-nav__menu--level-2 {
+    border-left: solid 18px var(--oliverolocal-color-2, #002855) !important;
+  }
+}
+
 /* Color for submenu triangle */
 @media (min-width: 75rem) {
   body:not(.is-always-mobile-nav) .primary-nav__menu-🥕 {
@@ -424,15 +424,15 @@ ol, ul {
   min-height: 440px;
 }
 }
-.blazy--view--team-projects h4,
-.blazy--view--webform-type h4 {
+/* KG - generalize this */
+.blazy--view h4 {
   display: block;
   width: 100%;
   margin: 0;
   padding: 0;
 }
-.blazy--view--team-projects h4 a,
-.blazy--view--webform-type h4 a {
+/* KG - generalize this */
+.blazy--view h4 a {
   display: block;
   width: 100%;
   text-align: center;
@@ -441,7 +441,7 @@ ol, ul {
   text-decoration: none;
   padding: .5em;
 }
-.blazy--view--team-projects .views-field-field-project-description {
+.blazy--view .views-field-field-project-description {
   margin-top: 1em;
 }
 
