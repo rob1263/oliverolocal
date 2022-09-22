@@ -442,13 +442,6 @@ ol, ul {
 .blazy--view--team-projects .grid__content {
   width: 100%;
 }
-/*
-@media screen and (min-width: 40em) {
-.blazy--view--team-projects .grid__content {
-  max-width: 320px;
-  min-height: 440px;
-}
-}
 /* KG - generalize this */
 .blazy--view h4 {
   display: block;
@@ -474,10 +467,10 @@ ol, ul {
   width: 100%;
 }
 @media screen and (min-width: 40em) {
-.blazy.slick--view--team-projects .grid__content {
-  max-width: 320px;
-  min-height: 440px;
-}
+  body:not(.path-frontpage) .blazy.slick--view--team-projects .grid__content {
+    max-width: 320px;
+    min-height: 440px;
+  }
 }
 .blazy.slick--view--team-projects h4,
 .blazy.slick--view--webform-type h4 {
@@ -498,23 +491,6 @@ ol, ul {
 }
 .blazy.slick--view--team-projects .views-field-field-project-description {
   margin-top: 1em;
-}
-
-@media screen and (min-width: 70em) {
-  .path-frontpage #block-views-block-team-projects-block-5 {
-    display: block;
-  }
-  .path-frontpage #block-views-block-team-projects-block-8 {
-    display: none;
-  }
-}
-@media screen and (max-width: 70em) {
-  .path-frontpage #block-views-block-team-projects-block-5 {
-    display: none;
-  }
-  .path-frontpage #block-views-block-team-projects-block-8 {
-    display: block;
-  }
 }
 
 .page-node-type-team article .field--name-field-paragraphs > .field__item .layout--twocol > .layout__region--first {
@@ -553,10 +529,13 @@ ol, ul {
 }
 
 /* Space between flex columns */
+.layout--twocol,
 .layout--twocol-bricks {
     column-gap: 2em;
 }
 @media screen and (min-width: 40em) {
+  .layout--twocol > .layout__region--first,
+  .layout--twocol > .layout__region--second,
   .layout--twocol-bricks > .layout__region--first-above,
   .layout--twocol-bricks > .layout__region--second-above,
   .layout--twocol-bricks > .layout__region--first-below,
