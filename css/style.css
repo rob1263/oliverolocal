@@ -547,3 +547,7 @@ ol, ul {
 ul.slick-dots {
   margin-left: 0;
 }
+
+.ck.ck-balloon-panel {
+  z-index: 1261 !important;
+}
