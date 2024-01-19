@@ -335,6 +335,9 @@ table#wf-crm-billing-items {
   .page-node-type-layout-page .paragraph--type--paragraph-layout textarea {
     width: 100%;
   }
+  .page-node-type-layout-page .paragraph--type--paragraph-layout .crm-container [type="text"] {
+    width: inherit;
+  }
 }
 
 /* Hotfix for D9.3 -> primary menu wrapping into rows */
@@ -443,6 +446,7 @@ ol, ul {
   width: 100%;
 }
 /* KG - generalize this */
+.slick--view--highlights .views-field-field-highlight-link,
 .blazy--view h4 {
   display: block;
   width: 100%;
@@ -450,6 +454,7 @@ ol, ul {
   padding: 0;
 }
 /* KG - generalize this */
+.slick--view--highlights .views-field-field-highlight-link a,
 .blazy--view h4 a {
   display: block;
   width: 100%;
@@ -459,10 +464,14 @@ ol, ul {
   text-decoration: none;
   padding: .5em;
 }
+.slick--view--highlights .views-field-field-highlight-link a {
+  padding-top: .875em;
+}
+.slick--view--highlights .views-field-field-body,
 .blazy--view .views-field-field-project-description {
   margin-top: 1em;
 }
-
+.slick--view--highlights .grid__content, 
 .blazy.slick--view--team-projects .grid__content {
   width: 100%;
 }
@@ -473,6 +482,7 @@ ol, ul {
   }
 }
 .blazy.slick--view--team-projects h4,
+.blazy.slick--view--highlights h4,
 .blazy.slick--view--webform-type h4 {
   display: block;
   width: 100%;
@@ -480,6 +490,7 @@ ol, ul {
   padding: 0;
 }
 .blazy.slick--view--team-projects h4 a,
+.blazy.slick--view--highlights h4 a,
 .blazy.slick--view--webform-type h4 a {
   display: block;
   width: 100%;
@@ -489,6 +500,7 @@ ol, ul {
   text-decoration: none;
   padding: .5em;
 }
+.blazy.slick--view--highlights .views-field-field-body,
 .blazy.slick--view--team-projects .views-field-field-project-description {
   margin-top: 1em;
 }
