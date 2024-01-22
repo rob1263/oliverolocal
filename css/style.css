@@ -199,6 +199,9 @@ ul.links.inline {
 }
 
 /* Webform css*/
+.webform-flexbox {
+  padding-right: 1em;
+}
 table#wf-crm-billing-items {
     width: 100%;
 }
