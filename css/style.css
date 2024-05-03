@@ -559,6 +559,13 @@ ol, ul {
   }
 }
 
+/* At mobile widths, switch two column flex to one column block */
+@media only screen and (max-width: 768px) {
+  .layout--twocol {
+    display: block;
+  }
+}
+
 ul.slick-dots {
   margin-left: 0;
 }
